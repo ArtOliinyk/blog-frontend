@@ -11,10 +11,15 @@ import Skeleton from "@mui/material/Skeleton";
 import { SideBlock } from "./SideBlock";
 
 export const TagsBlock = ({ items, isLoading = true }) => {
+    const tags = new Set();
+    items.forEach(item => {
+        item.tags.forEach(tag => tags.add(tag))
+    })
+    const arrayOfTags = Array.from(tags).filter(tag => tag !== "")
   return (
     <SideBlock title="Тэги">
       <List>
-        {(isLoading ? [...Array(5)] : items).map((name, i) => (
+        {(isLoading ? [...Array(5)] : arrayOfTags).map((name, i) => (
           <a
             style={{ textDecoration: "none", color: "black" }}
             href={`/tags/${name}`}

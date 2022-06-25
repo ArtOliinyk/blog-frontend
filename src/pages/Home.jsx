@@ -25,8 +25,8 @@ export const Home = () => {
   return (
     <>
       <Tabs style={{ marginBottom: 15 }} value={0} aria-label="basic tabs example">
-        <Tab label="Новые" />
-        <Tab label="Популярные" />
+        <Tab label="Нові" />
+        <Tab label="Популярні" />
       </Tabs>
       <Grid container spacing={4}>
         <Grid xs={8} item>
@@ -41,7 +41,7 @@ export const Home = () => {
                 user={obj.user}
                 createdAt={obj.createdAt}
                 viewsCount={obj.viewsCount}
-                commentsCount={3}
+                commentsCount={2}
                 tags={obj.tags}
                 isEditable={userData?._id === obj.user._id}
               />
@@ -55,17 +55,17 @@ export const Home = () => {
             items={[
               {
                 user: {
-                  fullName: 'Вася Пупкин',
-                  avatarUrl: 'https://mui.com/static/images/avatar/1.jpg',
+                  fullName: 'Василій',
+                  avatarUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fstuki-druki.com%2Fbiofoto3%2Fdwayne-johnson-01.jpg&imgrefurl=https%3A%2F%2Fstuki-druki.com%2Fauthors%2Fjohnson-dwayne.php&tbnid=Jn3vXhoBUYuDqM&vet=12ahUKEwje353Qr8n4AhVyl4sKHQK9DSIQMygHegUIARC2AQ..i&docid=jfoJH9zaXpUHqM&w=300&h=400&q=%D0%B4%D1%83%D0%B5%D0%B9%D0%BD%20%D0%B4%D0%B6%D0%BE%D0%BD%D1%81%D0%BE%D0%BD&ved=2ahUKEwje353Qr8n4AhVyl4sKHQK9DSIQMygHegUIARC2AQ',
                 },
-                text: 'Это тестовый комментарий',
+                text: 'Test Comment',
               },
               {
                 user: {
-                  fullName: 'Иван Иванов',
-                  avatarUrl: 'https://mui.com/static/images/avatar/2.jpg',
+                  fullName: 'Дмитро',
+                  avatarUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2F24studio.kiev.ua%2Fimages%2FA1%2Frock1.jpg.pagespeed.ce.jbnEaeHYwf.jpg&imgrefurl=https%3A%2F%2F24studio.kiev.ua%2Fnovosti%2F138-rock&tbnid=e580RPwxk7khUM&vet=12ahUKEwje353Qr8n4AhVyl4sKHQK9DSIQMygLegUIARC-AQ..i&docid=QytskXUI6hSxpM&w=2480&h=1772&q=%D0%B4%D1%83%D0%B5%D0%B9%D0%BD%20%D0%B4%D0%B6%D0%BE%D0%BD%D1%81%D0%BE%D0%BD&ved=2ahUKEwje353Qr8n4AhVyl4sKHQK9DSIQMygLegUIARC-AQ',
                 },
-                text: 'When displaying three lines or more, the avatar is not aligned at the top. You should set the prop to align the avatar at the top',
+                text: 'Слава Україні!',
               },
             ]}
             isLoading={false}

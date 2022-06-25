@@ -15,7 +15,7 @@ import { fetchRegister, selectIsAuth } from '../../redux/slices/auth';
 export const Registration = () => {
   const isAuth = useSelector(selectIsAuth);
   const dispatch = useDispatch();
-  const { register, handleSubmit, fromState: { errors, isValid } } = useForm({
+  const { register, handleSubmit, formState: { errors, isValid } } = useForm({
     defaultValues: {
       fullName: '',
       email: '',
@@ -44,7 +44,7 @@ export const Registration = () => {
     <Paper classes={{ root: styles.root }}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Typography classes={{ root: styles.title }} variant="h5">
-          Создание аккаунта
+          Створення аккаунту
         </Typography>
         <div className={styles.avatar}>
           <Avatar sx={{ width: 100, height: 100 }} />
@@ -54,7 +54,7 @@ export const Registration = () => {
           helperText={errors.fullName?.message}
           {...register('fullName', { required: 'Вкажіть повне ім' / 'я' })}
           className={styles.field}
-          label="Полное имя"
+          label="Повне ім'я"
           fullWidth />
         <TextField
           error={Boolean(errors.email?.message)}
@@ -73,7 +73,7 @@ export const Registration = () => {
           label="Пароль"
           fullWidth />
         <Button disabled={!isValid} type="submit" size="large" variant="contained" fullWidth>
-          Зарегистрироваться
+          Зареєструватися
         </Button>
       </form>
     </Paper>
